@@ -7,10 +7,10 @@ Para utilizar el script juegos.sql, que contiene un volcado de SQL de una base d
 
 ## Pasos para Importar el Script
 1. Accede a tu Herramienta de Gestión
-⋅⋅⋅Si usas phpMyAdmin, accede a la interfaz web.
-⋅⋅⋅Si usas MySQL Workbench o un cliente de línea de comandos, asegúrate de conectarte al servidor.
-2. Crear una Nueva Base de Datos (opcional)
-⋅⋅⋅Si deseas crear una nueva base de datos para este script:
+    Si usas phpMyAdmin, accede a la interfaz web.
+    Si usas MySQL Workbench o un cliente de línea de comandos, asegúrate de conectarte al servidor.
+3. Crear una Nueva Base de Datos (opcional)
+  Si deseas crear una nueva base de datos para este script:
 ```
 CREATE DATABASE videojuegos;
 USE videojuegos;
