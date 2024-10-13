@@ -2,6 +2,7 @@
 Este script SQL crea una base de datos y una tabla para almacenar datos de ventas de videojuegos, y también carga datos desde un archivo CSV en la tabla.
 
 ## SQL Script
+- Script en la carpeta llamado: create_and_load.sql
 
 ```
 CREATE DATABASE videojuegos;
@@ -48,6 +49,5 @@ IGNORE 1 ROWS
     mysqli.allow_local_infile = 1
     mysqli.local_infile_directory = "c:/xampp/mysql/data/"
     ```
-    
-## Additional Notes
-Ensure that the MySQL server is restarted after making these configuration changes for them to take effect.
+## Notas Adicionales
+Asegúrate de reiniciar el servidor MySQL después de realizar estos cambios en la configuración para que surtan efecto.
