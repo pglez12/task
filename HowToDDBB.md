@@ -1,4 +1,4 @@
-# How to DataBase
+# How to use create_and_load.sql script
 Este script SQL crea una base de datos y una tabla para almacenar datos de ventas de videojuegos, y también carga datos desde un archivo CSV en la tabla.
 
 ## SQL Script
