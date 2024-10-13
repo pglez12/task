@@ -16,13 +16,21 @@ CREATE DATABASE videojuegos;
 USE videojuegos;
 ```
 3. Importar el Script
+
 ⋅⋅* **phpMyAdmin**:
+
 ⋅⋅1. Selecciona la base de datos en la que deseas importar el script.
+
 ⋅⋅2. Ve a la pestaña "Importar".
+
 ⋅⋅3. Selecciona el archivo juegos.sql y haz clic en "Ejecutar".
+
 ⋅⋅* **MySQL Workbench**:
+
 ⋅⋅1. Abre una nueva ventana de consulta.
+
 ⋅⋅2. Copia el contenido del script juegos.sql y pégalo en la ventana de consulta.
+
 ⋅⋅3. Ejecuta el script.
 
 ## Estructura de la Tabla juegos
