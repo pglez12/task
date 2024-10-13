@@ -13,28 +13,28 @@ Para utilizar el script juegos.sql, que contiene un volcado de SQL de una base d
     Si usas MySQL Workbench o un cliente de línea de comandos, asegúrate de conectarte al servidor.
 2. Crear una Nueva Base de Datos (opcional)
  
-  Si deseas crear una nueva base de datos para este script:
+    Si deseas crear una nueva base de datos para este script:
 ```
 CREATE DATABASE videojuegos;
 USE videojuegos;
 ```
 3. Importar el Script
 
-⋅⋅* **phpMyAdmin**:
+    * **phpMyAdmin**:
 
-⋅⋅1. Selecciona la base de datos en la que deseas importar el script.
+        1. Selecciona la base de datos en la que deseas importar el script.
 
-⋅⋅2. Ve a la pestaña "Importar".
+        2. Ve a la pestaña "Importar".
 
-⋅⋅3. Selecciona el archivo juegos.sql y haz clic en "Ejecutar".
+        3. Selecciona el archivo juegos.sql y haz clic en "Ejecutar".
 
-⋅⋅* **MySQL Workbench**:
+    * **MySQL Workbench**:
 
-⋅⋅1. Abre una nueva ventana de consulta.
+        1. Abre una nueva ventana de consulta.
 
-⋅⋅2. Copia el contenido del script juegos.sql y pégalo en la ventana de consulta.
+        2. Copia el contenido del script juegos.sql y pégalo en la ventana de consulta.
 
-⋅⋅3. Ejecuta el script.
+        3. Ejecuta el script.
 
 ## Estructura de la Tabla juegos
 La tabla juegos tendrá las siguientes columnas:
