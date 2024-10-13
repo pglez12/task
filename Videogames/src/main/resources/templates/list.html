@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapStream - Lista de Videojuegos</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <h1>CapStream</h1>
+        <h2>LISTA DE VIDEOJUEGOS DISPONIBLES</h2>
+
+        <a href="/juegos/new" class="btn btn-primary mb-3">Nuevo Juego</a>
+        <form action="/juegos/year" method="get" class="mb-3">
+    		<label for="yearInput">Ingrese el año:</label>
+    		<input type="number" id="yearInput" name="year" min="0" max="2024" required>
+    		<button type="submit" class="btn btn-primary">Buscar</button>
+		</form>
+		<form action="/juegos/genre" method="get" class="mb-3">
+    		<label for="genreInput">Ingrese el género:</label>
+    		<input type="text" id="genreInput" name="genre" required>
+    		<button type="submit" class="btn btn-primary">Buscar</button>
+		</form>
+		
+
+        <div class="mb-3">
+            <label for="controllerSelect">Ir a:</label>
+            <select id="controllerSelect" class="form-select" onchange="location = this.value;">
+                <option value="">Seleccione una opción</option>
+                <option value="/siglo20">Juegos del Siglo 20</option>
+                <option value="/juegos/nintendo">Juegos de Nintendo</option>
+                <!-- Agrega más opciones según tus controladores -->
+            </select>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Nombre</th>
+                    <th>Plataforma</th>
+                    <th>Año</th>
+                    <th>Género</th>
+                    <th>Editor</th>
+                    <th>NA_Sales</th>
+                    <th>EU_Sales</th>
+                    <th>JP_Sales</th>
+                    <th>Other_Sales</th>
+                    <th>Global_Sales</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="juego : ${juegoList}">
+                    <td th:text="${juego.rank}"></td>
+                    <td th:text="${juego.name}"></td>
+                    <td th:text="${juego.platform}"></td>
+                    <td th:text="${juego.year}"></td>
+                    <td th:text="${juego.genre}"></td>
+                    <td th:text="${juego.publisher}"></td>
+                    <td th:text="${juego.naSales}"></td>
+                    <td th:text="${juego.euSales}"></td>
+                    <td th:text="${juego.jpSales}"></td>
+                    <td th:text="${juego.otherSales}"></td>
+                    <td th:text="${juego.globalSales}"></td>
+                    <td>
+                        <div class="action-buttons">
+                            <a th:href="@{/edit(id=${juego.id})}" class="btn btn-warning btn-sm">Editar</a>
+                            <a th:href="@{/delete (id=${juego.id})}" class="btn btn-danger btn-sm">Eliminar</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    <script>
+        document.getElementById('controllerSelect').addEventListener('change', function() {
+            if (this.value) {
+                window.location.href = this.value;
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Juegos</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Formulario</h1>
+        <div class="text-center">
+            <h2>Añade/edita un juego</h2>
+
+            <form method="post" th:object="${juego}" th:action="@{/save}">
+                <input id="id" th:field="*{id}" type="hidden" />
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td><label for="rank">RANK:</label></td>
+                                <td><input type="number" class="form-control" th:field="*{rank}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="name">NOMBRE:</label></td>
+                                <td><input type="text" class="form-control" th:field="*{name}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="platform">PLATAFORMA:</label></td>
+                                <td><input type="text" class="form-control" th:field="*{platform}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="year">AÑO:</label></td>
+                                <td><input type="number" class="form-control" th:field="*{year}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="genre">GÉNERO:</label></td>
+                                <td><input type="text" class="form-control" th:field="*{genre}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="publisher">EDITOR:</label></td>
+                                <td><input type="text" class="form-control" th:field="*{publisher}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="naSales">naSales:</label></td>
+                                <td><input type="number" class="form-control" th:field="*{naSales}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="euSales">euSales:</label></td>
+                                <td><input type="number" class="form-control" th:field="*{euSales}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="jpSales">jpSales:</label></td>
+                                <td><input type="number" class="form-control" th:field="*{jpSales}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="otherSales">otherSales:</label></td>
+                                <td><input type="number" class="form-control" th:field="*{otherSales}" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="globalSales">globalSales:</label></td>
+                                <td><input type="number" class="form-control" th:field="*{globalSales}" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center">
+                                    <input type="submit" class="btn btn-primary" value="Guardar Registro">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap JS y dependencias (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

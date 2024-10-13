@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CapStream - Lista de Videojuegos</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+		<h1>CapStream</h1>
+		<h2>LISTA DE VIDEOJUEGOS DISPONIBLES</h2>
+
+        <a href="juegos/new" class="btn btn-primary mb-3">Nuevo Juego</a>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Rank</th>
+					<th>Nombre</th>
+					<th>Plataforma</th>
+					<th>Año</th>
+					<th>Género</th>
+					<th>Editor</th>
+					<th>NA_Sales</th>
+					<th>EU_Sales</th>
+					<th>JP_Sales</th>
+					<th>Other_Sales</th>
+					<th>Global_Sales</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="juego : ${juegoList}">
+					<td th:text="${juego.rank}"></td>
+					<td th:text="${juego.name}"></td>
+					<td th:text="${juego.platform}"></td>
+					<td th:text="${juego.year}"></td>
+					<td th:text="${juego.genre}"></td>
+					<td th:text="${juego.publisher}"></td>
+					<td th:text="${juego.naSales}"></td>
+					<td th:text="${juego.euSales}"></td>
+					<td th:text="${juego.jpSales}"></td>
+					<td th:text="${juego.otherSales}"></td>
+					<td th:text="${juego.globalSales}"></td>
+					<td>
+						<div class="action-buttons">
+							<a th:href="@{/edit(id=${juego.id})}"
+								class="btn btn-warning btn-sm">Editar</a>
+
+							<form th:action="@{/delete/{id}(id=${juego.id})}" method="post"
+								style="display: inline;">
+								<input type="submit" class="btn btn-danger btn-sm"
+									value="Eliminar" />
+							</form>
+							<!--<a th:href="@{/delete(id=${juego.id})}" class="btn btn-danger btn-sm">Eliminar</a>-->
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
