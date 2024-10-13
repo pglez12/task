@@ -1,5 +1,5 @@
 # How to use Juegos.sql
-Para utilizar el script juegos.sql, que contiene un volcado de SQL de una base de datos de videojuegos, sigue estos pasos:
+Para utilizar el script `juegos.sql`, que contiene un volcado de SQL de una base de datos de videojuegos, sigue estos pasos:
 
 ## Requisitos Previos
 1. **Servidor de Base de Datos**: Necesitas tener un servidor de base de datos como MySQL o MariaDB instalado y funcionando.
@@ -26,13 +26,13 @@ USE videojuegos;
 
         2. Ve a la pestaña "Importar".
 
-        3. Selecciona el archivo juegos.sql y haz clic en "Ejecutar".
+        3. Selecciona el archivo `juegos.sql` y haz clic en "Ejecutar".
 
     * **MySQL Workbench**:
 
         1. Abre una nueva ventana de consulta.
 
-        2. Copia el contenido del script juegos.sql y pégalo en la ventana de consulta.
+        2. Copia el contenido del script `juegos.sql` y pégalo en la ventana de consulta.
 
         3. Ejecuta el script.
 
